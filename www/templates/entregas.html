@@ -1,0 +1,57 @@
+<ion-view hide-nav-bar="true">
+	<div class="bar bar-header bar-light">
+		<h1 class="title">Pedidos</h1>
+	</div>
+	<i class="material-icons" style="
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 99999;
+        color: {{cstatus}};
+    ">
+        {{nstatus}}
+    </i>
+	<ion-content class="has-header">
+		<div class="row mt-row">
+			<div id="pendientes" class="col s12" ng-show="pedidos.length">
+				<ul class="collapsible" data-collapsible="accordion" watch>
+					<li ng-repeat="pedido in pedidos">
+						<div class="collapsible-header">
+							<i class="material-icons">motorcycle</i>{{pedido.info.cliente.direccion}}
+						</div>
+						<div class="collapsible-body">
+							<div class="collection">
+							 	<a class="collection-item">Cliente: {{pedido.info.cliente.nombre}} {{pedido.info.cliente.apellidos}}</a>
+							 	<a class="collection-item">Telefono: {{pedido.info.cliente.fijo}} </a>
+							 	<a class="collection-item">Celular: {{pedido.info.cliente.fijo}} </a>
+							    <a class="collection-item">Tienda: {{pedido.empresa.referencia}}</a>
+							    <a class="collection-item">direccion tienda: {{pedido.empresa.direccion}}</a>
+							    <a class="collection-item">Total: ${{pedido.info.total_pedido}}</a>
+							    <div class="collection-item">
+							    	<a class="waves-effect waves-light btn red" style="width:49%; padding: 0 1rem;" ng-click="pedido.red_function({{pedido.id}}, {{pedido.tipo}})">{{pedido.red_button}}</a>
+							    	<a class="waves-effect waves-light btn green" style="width:49%; padding: 0 1rem;" ng-click="pedido.green_function({{pedido.id}}, {{pedido.tipo}})">{{pedido.green_button}}</a>
+							    	<!--a class="waves-effect waves-light btn red" style="width:49%; padding: 0 1rem;" ng-click="cancelar({{value.id}}, {{value.tipo}})" ng-show="accepted[{{value.id}}] == true || picked[{{value.id}}] == true">Cancelar</a>
+							    	<a class="waves-effect waves-light btn green right" style="width:49%; padding: 0 1rem;margin-bottom: 10px;" ng-show="accepted[{{value.id}}] == true" ng-click="recojer({{value.id}}, {{value.tipo}})">Recojido</a>
+							    	<a class="waves-effect waves-light btn green right" style="width:49%; padding: 0 1rem;margin-bottom: 10px;" ng-show="picked[{{value.id}}] == true" ng-click="confirmar({{value.id}}, {{value.tipo}})">Entregado</a-->
+							    </div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="no-pedido" ng-show="pedidos.length < 1">
+			<ul>
+				<li>
+					<i class="material-icons">motorcycle</i>
+				</li>
+				<li>
+					<p>No hay pedidos pendientes</p>
+				</li>
+			</ul>
+		</div>
+	</ion-content>
+	<div class="bar bar-footer bar-balanced teal">
+	  <div class="title">Pedidos entregados {{numero_pedidos}}</div>
+	</div>
+</ion-view>

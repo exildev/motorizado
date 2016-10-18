@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+
+.mt-row{
+  display: block;
+  padding: 0;
+}
+
+.no-pedido{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	align-self: center;
+	align-content: center;
+	justify-content: center;
+	background-color: #555;
+}
+
+.no-pedido ul{
+	list-style: none
+}
+
+.no-pedido i{
+	font-size: 140px;
+	color: #fff;
+}
+
+.no-pedido li{
+	text-align: center;
+	color: #fff;
+}
+
+.bar-footer {
+	height: 50px;
+}

@@ -1,0 +1,41 @@
+<ion-view class="green lighten-4" hide-nav-bar="true">
+    <i class="material-icons" style="
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 99999;
+        color: {{cstatus}};
+    ">
+        {{nstatus}}
+    </i>
+    <link href="css/login.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <div id="login-page" class="row" ng-style="keyStyle">
+      <div class="col s12 z-depth-4 card-panel">
+
+        <div class="row header">
+          <div class="input-field col s12 center">
+            <img src="{{foto}}" alt="" class="responsive-img valign" ng-class="{'profile-image-login':!submited, 'img-login-big':submited, 'circle': has_foto}">
+            <h4 class="header">{{nombre}}</h4>
+          </div>
+        </div>
+        <div class="row mt-row" ng-show="!submited">
+          <div class="col s12" id="pass-container">
+            <i class="material-icons" ng-click="erase()" on-hold="eraseAll()">backspace</i>
+            <input type="password" name="name" ng-model="password">
+          </div>
+        </div>
+
+        <div class="buttons row mt-row" ng-show="!focus && !submited">
+          <div class="col s4 gps-container">
+            <span class="margin ultra-small left"><a ng-click="leerQR()">GPS-QR</a></span>
+            </div>
+            <div class="col s4">
+              <a class="btn-floating btn-large indigo sender" angular-ripple ng-click="login()">
+                <i class="material-icons">send</i>
+              </a>
+            </div>
+        </div>
+        <ion-spinner icon="dots" ng-show="spinner_show"></ion-spinner>
+      </div-->
+    </div>
+</ion-view>

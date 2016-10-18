@@ -1,0 +1,168 @@
+.row{
+  margin-bottom: 0;
+}
+
+#login-page{
+  height: 100vh;
+  min-height: 400px;
+}
+
+#login-page .card-panel{
+  height: calc(100% - 15px);
+}
+
+.keyboard {
+  height: calc(100% - 170px);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hide-keyboard .keyboard{
+  margin-top: 100%;
+}
+
+div.header{
+  margin-top: 30%;
+}
+
+.img-login-big {
+  width: 120px;
+  height: 120px !important;
+}
+
+.login-form img{
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header{
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.keyboard table{
+  height: 100%;
+}
+
+td[colspan="3"]:not(.controls){
+  padding-bottom: calc(86% - 80px);
+}
+
+.keyboard td, #pass-container{
+  text-align: center;
+  font-size: 1.6em;
+  color: #4CAF50;
+}
+
+.keyboard td > a{
+  color: #4CAF50;
+}
+
+#pass-container i {
+  position: absolute;
+  margin-top: 12px;
+  margin-left: calc(50% - 50px);
+  color: #3f51b5;
+}
+
+#send-container{
+  padding-bottom: 10px;
+}
+
+input[type=password]{
+  border-bottom: 1px solid #4CAF50;
+}
+
+#send-container a{
+  color: #727272;
+}
+
+input[type="password"]{
+  background-color: transparent !important;
+  text-align: center;
+}
+
+.login-form{
+  margin: auto;
+  width: 100%;
+  height: 84%;
+}
+
+.login-form h4{
+  margin-bottom: 0;
+}
+
+.gps-container {
+  height: 56px;
+  padding-top: 20px !important;
+}
+
+.btn-floating.btn-large i {
+    line-height: 60px;
+}
+
+.btn-floating.btn-large {
+    width: 60px;
+    height: 60px;
+}
+
+td[colspan="3"]{
+  padding: 0;
+}
+
+[angular-ripple] {
+    position: relative;
+    overflow: hidden;
+  }
+  .angular-ripple {
+    display: block;
+    position: absolute;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .angular-ripple.animate {
+    -webkit-animation: ripple .35s linear;
+            animation: ripple .35s linear;
+  }
+  @-webkit-keyframes ripple {
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(2.5);
+              transform: scale(2.5);
+    }
+  }
+  @keyframes ripple {
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(2.5);
+              transform: scale(2.5);
+    }
+  }
+
+.spinner svg {
+  width: 25px;
+  height: 25px;
+  stroke: #444;
+  fill: #444;
+  position: fixed;
+  top: calc(60% + 15px);
+  left: calc(50% - 10px);
+}
+
+.buttons{
+  width: 100%;
+  left: 0;
+  padding: 0.75rem;
+  bottom: 12px;
+  margin-top: calc(100% - 200px) !important;
+}
+
+.sender{
+  margin-left: calc(50% - 30px);
+}
+
+img.responsive-img{
+  max-width: 40% !important;
+}
